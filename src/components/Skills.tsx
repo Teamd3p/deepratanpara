@@ -1,5 +1,5 @@
 const SkillItem = ({ title, level }: { title: string; level: string }) => (
-  <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl border border-white/10">
     <h3 className="text-xl font-medium mb-2 text-primary">{title}</h3>
     <p className="text-gray-300">{level}</p>
   </div>
@@ -7,7 +7,7 @@ const SkillItem = ({ title, level }: { title: string; level: string }) => (
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
+    <section id="skills" className="py-20 bg-gradient-to-br from-gray-800 to-gray-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/placeholder.svg')] opacity-5"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
