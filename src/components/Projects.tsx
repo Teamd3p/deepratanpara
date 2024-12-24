@@ -7,11 +7,17 @@ const ProjectCard = ({
   description: string;
   image: string;
 }) => (
-  <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg">
-    <img src={image} alt={title} className="w-full h-48 object-cover" />
+  <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg group">
+    <div className="overflow-hidden">
+      <img 
+        src={image} 
+        alt={title} 
+        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" 
+      />
+    </div>
     <div className="p-6">
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-xl font-semibold mb-2 transform transition-transform duration-300 animate-fade-in">{title}</h3>
+      <p className="text-gray-600 transform transition-all duration-500 animate-fade-in delay-100">{description}</p>
     </div>
   </div>
 );
@@ -20,8 +26,8 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl mb-4">My Projects</h2>
-        <p className="text-gray-600 mb-12">
+        <h2 className="text-4xl mb-4 animate-fade-in">My Projects</h2>
+        <p className="text-gray-600 mb-12 animate-fade-in delay-75">
           I prioritize quality over quantity, choosing to work on fewer projects that truly make a difference.
         </p>
         <div className="grid md:grid-cols-3 gap-8">
