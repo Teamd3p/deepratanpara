@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -13,19 +13,27 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-gray-700 hover:text-primary">Home</a>
             <a href="#skills" className="text-gray-700 hover:text-primary">Skills</a>
-            <a href="#projects" className="text-gray-700 hover:text-primary">Project</a>
+            <a href="#projects" className="text-gray-700 hover:text-primary">Projects</a>
             <a href="#achievements" className="text-gray-700 hover:text-primary">Achievements</a>
-            <a href="#about" className="text-gray-700 hover:text-primary">About Me</a>
           </div>
 
           <div className="flex items-center space-x-4">
-            <div className="hidden md:flex items-center">
-              <Phone className="h-4 w-4 text-primary mr-2" />
-              <span className="text-gray-700">+91 987001262</span>
-            </div>
-            <Button variant="outline" className="hidden md:inline-flex">
-              Sign in
-            </Button>
+            <a 
+              href="https://github.com/Teamd3p" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-primary transition-colors"
+            >
+              <Github className="h-5 w-5" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/deep-ratanpara-a87810269/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-primary transition-colors"
+            >
+              <Linkedin className="h-5 w-5" />
+            </a>
             <Button className="bg-primary hover:bg-primary/90">
               Contact Us
             </Button>
