@@ -6,7 +6,7 @@ const About = () => {
           <div className="w-full md:w-1/2">
             <div className="relative w-full max-w-md mx-auto aspect-square rounded-full overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+                src="/lovable-uploads/8b4afc54-d6f9-419a-835d-282b4f1fd79d.png"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
