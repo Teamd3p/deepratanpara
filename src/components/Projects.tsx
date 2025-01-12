@@ -1,7 +1,18 @@
 import { Badge } from "./ui/badge";
 import { Card, CardContent } from "./ui/card";
+import { useState } from "react";
+import { MoreHorizontal } from "lucide-react";
 
 const Projects = () => {
+  const [expandedDescriptions, setExpandedDescriptions] = useState<{ [key: number]: boolean }>({});
+
+  const toggleDescription = (index: number) => {
+    setExpandedDescriptions(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   const projectData = [
     {
       title: "Advanced Keylogger and Phishing Attack",
@@ -57,7 +68,19 @@ const Projects = () => {
                   </div>
                 )}
                 <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <div className="relative">
+                  <p className="text-gray-600 mb-4">
+                    {expandedDescriptions[index] 
+                      ? project.description
+                      : `${project.description.slice(0, 150)}...`}
+                    <button 
+                      onClick={() => toggleDescription(index)}
+                      className="inline-flex items-center ml-2 text-blue-500 hover:text-blue-700"
+                    >
+                      <MoreHorizontal className="h-4 w-4" />
+                    </button>
+                  </p>
+                </div>
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
                     {project.skills.map((skill, skillIndex) => (
