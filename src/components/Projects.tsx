@@ -1,51 +1,70 @@
-const ProjectCard = ({
-  title,
-  description,
-  image,
-}: {
-  title: string;
-  description: string;
-  image: string;
-}) => (
-  <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg group">
-    <div className="overflow-hidden">
-      <img 
-        src={image} 
-        alt={title} 
-        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" 
-      />
-    </div>
-    <div className="p-6">
-      <h3 className="text-xl font-semibold mb-2 transform transition-transform duration-300 animate-fade-in">{title}</h3>
-      <p className="text-gray-600 transform transition-all duration-500 animate-fade-in delay-100">{description}</p>
-    </div>
-  </div>
-);
+import { Badge } from "./ui/badge";
+import { Card, CardContent } from "./ui/card";
 
 const Projects = () => {
+  const projectData = [
+    {
+      title: "Security Research & Analysis",
+      description: "Conducted authorized security research to identify potential vulnerabilities in system input handling and network communications. Developed proof-of-concept tools for security testing in controlled environments, leading to improved system hardening recommendations and enhanced security awareness training materials.",
+      skills: ["Python", "Network Security", "Security Analysis", "Ethical Hacking"],
+      achievements: [
+        "Identified and documented critical security vulnerabilities in controlled test environments",
+        "Developed comprehensive security assessment methodologies",
+        "Created educational materials for security awareness training",
+        "Contributed to improving organizational security policies"
+      ]
+    },
+    {
+      title: "Web Application Security Scanner",
+      description: "Developed an automated security scanning tool to identify common web vulnerabilities and security misconfigurations in web applications.",
+      skills: ["Python", "Web Security", "Automation", "API Testing"],
+      achievements: [
+        "Automated detection of XSS, SQL injection, and CSRF vulnerabilities",
+        "Implemented custom security rules and checks",
+        "Reduced manual testing time by 60%",
+        "Generated detailed security reports"
+      ]
+    },
+    {
+      title: "Network Traffic Analyzer",
+      description: "Created a network monitoring tool for analyzing and visualizing network traffic patterns to detect potential security threats.",
+      skills: ["Python", "Network Analysis", "Data Visualization", "Threat Detection"],
+      achievements: [
+        "Real-time traffic monitoring and analysis",
+        "Pattern recognition for anomaly detection",
+        "Custom alert system for suspicious activities",
+        "Interactive dashboard for traffic visualization"
+      ]
+    }
+  ];
+
   return (
-    <section id="projects" className="py-20">
+    <section className="py-20 bg-white" id="projects">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl mb-4 animate-fade-in">My Projects</h2>
-        <p className="text-gray-600 mb-12 animate-fade-in delay-75">
-          I prioritize quality over quantity, choosing to work on fewer projects that truly make a difference.
-        </p>
-        <div className="grid md:grid-cols-3 gap-8">
-          <ProjectCard
-            title="Innovative Ideas"
-            description="Our creativity is at the forefront of everything we do, delivering innovative solutions that make your project stand out while maintaining a balance between originality and functionality."
-            image="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-          />
-          <ProjectCard
-            title="Comprehensive Support"
-            description="From the initial stages to completion, we offer support every step of the way, ensuring you feel confident in your choices and that your project is a success."
-            image="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-          />
-          <ProjectCard
-            title="Timeless Quality"
-            description="Our services are built to last, ensuring that every solution we provide is of the highest quality, bringing lasting value to your investment and ultimate customer satisfaction."
-            image="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
-          />
+        <h2 className="text-4xl font-light text-center mb-12">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projectData.map((project, index) => (
+            <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
+                <p className="text-gray-600 mb-4">{project.description}</p>
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.skills.map((skill, skillIndex) => (
+                      <Badge key={skillIndex} variant="secondary">
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+                <ul className="list-disc list-inside text-gray-600 space-y-2">
+                  {project.achievements.map((achievement, achievementIndex) => (
+                    <li key={achievementIndex}>{achievement}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
