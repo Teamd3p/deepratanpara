@@ -4,14 +4,14 @@ import { Card, CardContent } from "./ui/card";
 const Projects = () => {
   const projectData = [
     {
-      title: "Security Research & Analysis",
-      description: "Conducted authorized security research to identify potential vulnerabilities in system input handling and network communications. Developed proof-of-concept tools for security testing in controlled environments, leading to improved system hardening recommendations and enhanced security awareness training materials.",
-      skills: ["Python", "Network Security", "Security Analysis", "Ethical Hacking"],
+      title: "Advanced Keylogger and Phishing Attack Implementation",
+      description: "Developed an efficient keylogging system to monitor user input for security analysis, ensuring 100% accuracy and seamless deployment. Designed and executed a delivery mechanism that guaranteed proper installation on target devices while establishing a secure backdoor communication channel for real-time monitoring.",
+      skills: ["Python", "Network Security", "Ethical Hacking", "System Analysis"],
       achievements: [
-        "Identified and documented critical security vulnerabilities in controlled test environments",
-        "Developed comprehensive security assessment methodologies",
-        "Created educational materials for security awareness training",
-        "Contributed to improving organizational security policies"
+        "Developed sophisticated monitoring system",
+        "Implemented secure communication channels",
+        "Achieved 100% deployment success rate",
+        "Created detailed documentation and analysis reports"
       ]
     },
     {
