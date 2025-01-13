@@ -17,7 +17,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <img src="/placeholder.svg" alt="Logo" className="h-8 w-auto" />
+            <img 
+              src="/lovable-uploads/c789c4cf-e2b0-4617-92b3-bab0afef61c6.png" 
+              alt="Deep Logo" 
+              className="h-8 w-auto"
+            />
           </div>
           
           <div className="hidden md:flex items-center space-x-8">

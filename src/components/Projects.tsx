@@ -18,7 +18,6 @@ const Projects = () => {
       title: "Advanced Keylogger and Phishing Attack",
       description: "Developed an efficient keylogging system to monitor user input for security analysis, ensuring 100% accuracy and seamless deployment. Designed and executed a delivery mechanism that guaranteed proper installation on target devices while establishing a secure backdoor communication channel for real-time monitoring. This project showcased expertise in penetration testing and ethical hacking, focusing on identifying vulnerabilities and strengthening cybersecurity defenses in controlled, ethical environments.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      logo: "/lovable-uploads/504a66e2-ecbf-45ce-ae9a-679df9ddf07d.png",
       skills: ["Python", "Network Security", "Ethical Hacking", "System Analysis"],
       achievements: [
         "Developed sophisticated monitoring system",
@@ -31,7 +30,6 @@ const Projects = () => {
       title: "Hybrid Encryption Algorithm with Morse Code | Design and Developed my Me",
       description: "Developed a custom hybrid algorithm combining encryption and hashing techniques to enhance security in authentication systems. This innovative solution integrates Digital Signature Algorithm (DSA) with Morse code encoding, creating a unique layer of complexity that significantly strengthens data protection. The design ensures robust resistance to brute-force attacks, leveraging the combined power of cryptographic hashing and unconventional encoding. This project highlights expertise in advanced cryptographic methodologies, showcasing the ability to design secure, cutting-edge solutions tailored to modern cybersecurity challenges. It reflects a commitment to innovation in developing highly secure and reliable authentication systems.",
       image: "/lovable-uploads/8b38981f-71d6-4aac-8701-ade1265da9d9.png",
-      logo: "/lovable-uploads/504a66e2-ecbf-45ce-ae9a-679df9ddf07d.png",
       skills: ["Cryptography", "Algorithm Design", "Security Engineering", "Authentication Systems"],
       achievements: [
         "Developed innovative hybrid encryption algorithm",
@@ -67,15 +65,6 @@ const Projects = () => {
                       src={project.image} 
                       alt={project.title}
                       className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                )}
-                {project.logo && (
-                  <div className="mb-4">
-                    <img 
-                      src={project.logo} 
-                      alt="Project Logo"
-                      className="h-8 w-auto mx-auto"
                     />
                   </div>
                 )}
