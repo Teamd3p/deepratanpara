@@ -54,7 +54,10 @@ const Projects = () => {
   return (
     <section className="py-20 bg-white" id="projects">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-light text-center mb-12">Projects</h2>
+        <h2 className="text-4xl font-light text-center mb-6">Projects</h2>
+        <p className="text-center font-bold text-lg mb-12">
+          I prioritize quality over quantity, choosing to work on fewer projects that truly make a difference.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectData.map((project, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
