@@ -42,12 +42,7 @@ const Projects = () => {
       title: "Network Traffic Analyzer",
       description: "Created a network monitoring tool for analyzing and visualizing network traffic patterns to detect potential security threats.",
       skills: ["Python", "Network Analysis", "Data Visualization", "Threat Detection"],
-      achievements: [
-        "Real-time traffic monitoring and analysis",
-        "Pattern recognition for anomaly detection",
-        "Custom alert system for suspicious activities",
-        "Interactive dashboard for traffic visualization"
-      ]
+      achievements: []
     }
   ];
 
