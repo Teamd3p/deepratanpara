@@ -18,9 +18,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/53c85401-5df4-419d-9c20-394102b340ca.png" 
+              src="/lovable-uploads/ef820c9c-16ab-4e7d-b1fe-71f02de0ffa4.png" 
               alt="Deep Logo" 
-              className="h-12 w-auto" // Increased height from h-8 to h-12 for better visibility
+              className="h-10 w-auto" 
             />
           </div>
           

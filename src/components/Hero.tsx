@@ -1,6 +1,23 @@
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY;
+      if (position > 100) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div 
       className="min-h-screen flex items-center justify-center relative"
@@ -21,14 +38,16 @@ const Hero = () => {
             <br />
             I'm Deep
             <br />
-            <span className="text-4xl md:text-5xl">
+            <span className={`text-4xl md:text-5xl transition-all duration-700 transform ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               I specialize in Cyber Security as
               <br />
               both an Analyst and a Developer
             </span>
           </h1>
           <Button className="mt-8 bg-primary hover:bg-primary/90 text-xl px-8 py-6">
-            Contact Me
+            Resume
           </Button>
         </div>
       </div>
