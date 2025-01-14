@@ -33,6 +33,13 @@ const Projects = () => {
       description: "Created a network monitoring tool for analyzing and visualizing network traffic patterns to detect potential security threats.",
       skills: ["Python", "Network Analysis", "Data Visualization", "Threat Detection"],
       achievements: []
+    },
+    {
+      title: "DNA-Based Cryptographic Encryption with RSA Key Exchange for Secure Communication",
+      description: "This project introduces an innovative encryption method leveraging DNA cryptography combined with the RSA key exchange algorithm for enhanced data security. The technique converts text into ASCII, translates it to DNA sequences, and applies a unique key-based transformation involving subsequence selection and swaps. The encrypted data is transmitted securely and decrypted at the receiver's end to retrieve the original message. With minimal computational overhead, this method ensures high efficiency and secrecy. Security analysis, including frequency analysis, Friedman randomness tests, and RSA evaluation, demonstrates the robustness of the proposed approach against potential threats, making it a viable solution for secure communication.",
+      image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31",
+      skills: ["DNA Cryptography", "RSA Algorithm", "Security Analysis", "Encryption Systems"],
+      achievements: []
     }
   ];
 
