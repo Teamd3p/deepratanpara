@@ -6,9 +6,16 @@ const Footer = () => {
     <footer className="bg-gray-100 py-12 mt-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center space-x-2">
-            <Copyright className="h-4 w-4" />
-            <span className="text-gray-600">Deep Ratanpara</span>
+          <div className="flex items-center space-x-4">
+            <img 
+              src="/lovable-uploads/37b5e961-4487-449e-a8b3-0ed8a35a9e7a.png" 
+              alt="Deep Logo" 
+              className="h-8 w-auto" 
+            />
+            <div className="flex items-center space-x-2">
+              <Copyright className="h-4 w-4" />
+              <span className="text-gray-600">Deep Ratanpara</span>
+            </div>
           </div>
           
           <div className="flex items-center space-x-6">
