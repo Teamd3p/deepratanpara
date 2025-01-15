@@ -8,9 +8,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center space-x-4">
             <img 
-              src="/lovable-uploads/37b5e961-4487-449e-a8b3-0ed8a35a9e7a.png" 
+              src="/lovable-uploads/fb2346f8-7c4f-4585-be3d-50c38e396f6d.png" 
               alt="Deep Logo" 
-              className="h-8 w-auto" 
+              className="h-8 w-auto mix-blend-multiply" 
             />
             <div className="flex items-center space-x-2">
               <Copyright className="h-4 w-4" />
