@@ -49,7 +49,7 @@ const Footer = () => {
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-primary hover:bg-primary/90 transition-colors duration-300"
           >
-            Get in touch
+            Resume
           </Button>
         </div>
       </div>
