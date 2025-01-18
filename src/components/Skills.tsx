@@ -21,7 +21,7 @@ const Skills = () => {
               <div>
                 <SkillItem title="Python" level="Experienced" />
                 <SkillItem title="C/C#" level="Experienced" />
-                <SkillItem title="SQL" level="Intermediate" />
+                <SkillItem title="PostgreSQL" level="Intermediate" />
                 <SkillItem title="Java | SpringBoot" level="Basic" />
               </div>
             </div>
