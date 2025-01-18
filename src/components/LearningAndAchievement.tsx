@@ -17,13 +17,14 @@ const LearningAndAchievement = () => {
             </h3>
             <ul className="space-y-4">
               {[
-                "Computer Networking",
+                "Security fundamentals (CIA Triad, Risk Management, Security Policies)",
                 "Open Source Platform and Network Administration",
-                "Risk Management in Information Systems",
+                "Cryptography (AES, RSA, Hashing, Digital Signatures)",
                 "Web Security",
-                "Network Forensics",
+                "Network security (Firewalls, IDS/IPS, VPNs, TLS/SSL)",
                 "Ethical Hacking and Offensive Security",
-                "Incident Response"
+                "Secure coding (OWASP Top 10, SAST & DAST, DevSecOps)",
+                "Cybersecurity research & innovation "
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
                   <Check className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
