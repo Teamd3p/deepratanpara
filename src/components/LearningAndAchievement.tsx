@@ -41,12 +41,12 @@ const LearningAndAchievement = () => {
             </h3>
             <ul className="space-y-4">
               {[
-                "Pre Security Course Certificate on TryHackMe",
+                "PortSwigger Mastery – Advanced expertise in Burp Suite, Web Security Academy, and OWASP Top 10 exploitation",
                 "Networking Essentials Course Certificate on Cisco",
-                "Web Design for Everybody Course Certificate on Coursera",
-                "Python For Everybody Course Certificate on Coursera",
-                "Ethical Hacking for Beginners Course Certificate on SimpliLearn",
-                "Cybersecurity Foundations Course Certificate on LinkedIn"
+                "eCPPTv2 | Penetration Testing Professional",
+                "Python 101 For Hackers",
+                "We are in the Top 50 from 20,000+ teams from Gujarat(we are only onces)",
+                "Work on real-world cybersecurity problems (e.g., drone jamming detection using SDR)"
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
                   <Check className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
