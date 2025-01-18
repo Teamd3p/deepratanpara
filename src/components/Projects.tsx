@@ -15,30 +15,31 @@ const Projects = () => {
 
   const projectData = [
     {
+      title: "Web Dev | Secured Application",
+      description: "Designed and implemented a simulated web application project focused on security testing and hardening. The project involved developing a web app and then executing penetration testing using Kali Linux tools and the Metasploit framework. Conducted vulnerability assessments, exploited security flaws, and implemented secure coding practices to mitigate risks. Key areas tested included SQL Injection, Cross-Site Scripting (XSS), Broken Authentication, and Server Misconfigurations. The project enhanced expertise in ethical hacking, web application security, and secure development lifecycle (SDLC), ensuring robust security measures in web applications against real-world cyber threats.",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      skills: ["Web Security", "Penetration Testing", "Ethical Hacking", "Secure Development"],
+      achievements: []
+    },
+    {
+      title: "Web Dev | Secured Application",
+      description: "Designed and implemented a simulated web application project focused on security testing and hardening. The project involved developing a web app and then executing penetration testing using Kali Linux tools and the Metasploit framework. Conducted vulnerability assessments, exploited security flaws, and implemented secure coding practices to mitigate risks. Key areas tested included SQL Injection, Cross-Site Scripting (XSS), Broken Authentication, and Server Misconfigurations. The project enhanced expertise in ethical hacking, web application security, and secure development lifecycle (SDLC), ensuring robust security measures in web applications against real-world cyber threats.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      skills: ["Web Security", "Penetration Testing", "Ethical Hacking", "Secure Development"],
+      achievements: []
+    },
+    {
+      title: "Web Dev | Secured Application",
+      description: "Designed and implemented a simulated web application project focused on security testing and hardening. The project involved developing a web app and then executing penetration testing using Kali Linux tools and the Metasploit framework. Conducted vulnerability assessments, exploited security flaws, and implemented secure coding practices to mitigate risks. Key areas tested included SQL Injection, Cross-Site Scripting (XSS), Broken Authentication, and Server Misconfigurations. The project enhanced expertise in ethical hacking, web application security, and secure development lifecycle (SDLC), ensuring robust security measures in web applications against real-world cyber threats.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      skills: ["Web Security", "Penetration Testing", "Ethical Hacking", "Secure Development"],
+      achievements: []
+    },
+    {
       title: "Advanced Keylogger and Phishing Attack",
       description: "Developed an efficient keylogging system to monitor user input for security analysis, ensuring 100% accuracy and seamless deployment. Designed and executed a delivery mechanism that guaranteed proper installation on target devices while establishing a secure backdoor communication channel for real-time monitoring. This project showcased expertise in penetration testing and ethical hacking, focusing on identifying vulnerabilities and strengthening cybersecurity defenses in controlled, ethical environments.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
       skills: ["Python", "Network Security", "Ethical Hacking", "System Analysis"],
-      achievements: []
-    },
-    {
-      title: "Hybrid Encryption Algorithm with Morse Code | Design and Developed my Me",
-      description: "Developed a custom hybrid algorithm combining encryption and hashing techniques to enhance security in authentication systems. This innovative solution integrates Digital Signature Algorithm (DSA) with Morse code encoding, creating a unique layer of complexity that significantly strengthens data protection. The design ensures robust resistance to brute-force attacks, leveraging the combined power of cryptographic hashing and unconventional encoding. This project highlights expertise in advanced cryptographic methodologies, showcasing the ability to design secure, cutting-edge solutions tailored to modern cybersecurity challenges. It reflects a commitment to innovation in developing highly secure and reliable authentication systems.",
-      image: "/lovable-uploads/8b38981f-71d6-4aac-8701-ade1265da9d9.png",
-      skills: ["Cryptography", "Algorithm Design", "Security Engineering", "Authentication Systems"],
-      achievements: []
-    },
-    {
-      title: "Network Traffic Analyzer",
-      description: "Created a network monitoring tool for analyzing and visualizing network traffic patterns to detect potential security threats.",
-      skills: ["Python", "Network Analysis", "Data Visualization", "Threat Detection"],
-      achievements: []
-    },
-    {
-      title: "DNA-Based Cryptographic Encryption with RSA Key Exchange for Secure Communication",
-      description: "This project introduces an innovative encryption method leveraging DNA cryptography combined with the RSA key exchange algorithm for enhanced data security. The technique converts text into ASCII, translates it to DNA sequences, and applies a unique key-based transformation involving subsequence selection and swaps. The encrypted data is transmitted securely and decrypted at the receiver's end to retrieve the original message. With minimal computational overhead, this method ensures high efficiency and secrecy. Security analysis, including frequency analysis, Friedman randomness tests, and RSA evaluation, demonstrates the robustness of the proposed approach against potential threats, making it a viable solution for secure communication.",
-      image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31",
-      skills: ["DNA Cryptography", "RSA Algorithm", "Security Analysis", "Encryption Systems"],
       achievements: []
     }
   ];
