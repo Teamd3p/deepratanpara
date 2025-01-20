@@ -26,16 +26,10 @@ const Work = () => {
         
         <div className="max-w-4xl mx-auto">
           <WorkItem 
-            title="Cyber Security Analyst"
-            company="Freelancer"
-            duration="2022 - Present"
-            description="Working as a freelance security analyst, conducting penetration testing, vulnerability assessments, and implementing security solutions for various clients. Specializing in web application security and network infrastructure protection."
-          />
-          <WorkItem 
-            title="Security Researcher"
-            company="Independent"
-            duration="2021 - 2022"
-            description="Conducted independent security research focusing on emerging threats and vulnerabilities. Developed and tested new security tools and methodologies for improving cyber defense mechanisms."
+            title="TSS Consultancy Services"
+            company="Intern"
+            duration="Present"
+            description="Working as a Data Extractor involves extracting, transforming, and loading (ETL) data from various sources like PDFs, websites, or databases into structured formats like CSV or SQL. It requires skills in Python (BeautifulSoup, Pandas, PyPDF2, OCR) and Flask for APIs if automation is needed."
           />
         </div>
       </div>
