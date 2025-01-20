@@ -8,7 +8,7 @@ const Hero = () => {
     // Set isVisible to true after component mount with a delay
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 1000); // 1 second delay
+    }, 2000); // 2 second delay
 
     return () => clearTimeout(timer);
   }, []);
