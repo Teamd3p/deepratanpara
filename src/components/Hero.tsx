@@ -5,17 +5,12 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const position = window.scrollY;
-      if (position > 100) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+    // Set isVisible to true after component mount with a delay
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1000); // 1 second delay
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -38,7 +33,7 @@ const Hero = () => {
             <br />
             I'm Deep
             <br />
-            <span className={`text-4xl md:text-5xl transition-all duration-700 transform ${
+            <span className={`text-4xl md:text-5xl transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               I specialize in Cyber Security as
