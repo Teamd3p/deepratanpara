@@ -2,6 +2,16 @@ import { Github, Twitter, Instagram, Copyright } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Footer = () => {
+  const handleResumeClick = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = '/lovable-uploads/Deep_Resume.pdf'; // Make sure to upload your resume with this exact name
+    link.download = 'Deep_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <footer className="bg-gray-100 py-12 mt-20">
       <div className="container mx-auto px-4">
@@ -46,7 +56,7 @@ const Footer = () => {
           </div>
           
           <Button 
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={handleResumeClick}
             className="bg-primary hover:bg-primary/90 transition-colors duration-300"
           >
             Resume
