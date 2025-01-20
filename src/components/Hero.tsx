@@ -17,7 +17,7 @@ const Hero = () => {
     // Create a link element
     const link = document.createElement('a');
     link.href = '/lovable-uploads/Deep_Resume.pdf'; // Make sure to upload your resume with this exact name
-    link.download = 'Deep_Resume.pdf';
+    link.download = 'Resume_deep.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
