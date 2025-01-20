@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center space-x-4">
             <img 
-              src="/lovable-uploads/fb2346f8-7c4f-4585-be3d-50c38e396f6d.png" 
+              src="/lovable-uploads/Deep-5.svg" 
               alt="Deep Logo" 
               className="h-8 w-auto mix-blend-multiply" 
             />
