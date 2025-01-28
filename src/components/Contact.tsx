@@ -17,7 +17,7 @@ const Contact = () => {
   
   useEffect(() => {
     // Initialize EmailJS with your public key
-    emailjs.init('service_dcs524g');
+    emailjs.init('uRre9hqR56qq3VWUr');
   }, []);
 
   const [formData, setFormData] = useState({
@@ -58,7 +58,6 @@ const Contact = () => {
         'service_d4i0r2u',
         '__ejs-test-mail-service__',
         templateParams
-        'uRre9hqR56qq3VWUr'
       );
 
       if (result.status === 200) {
