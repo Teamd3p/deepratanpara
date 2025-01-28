@@ -44,13 +44,13 @@ const Contact = () => {
 
     try {
       const templateParams = {
+        to_name: 'Deep',
         from_name: formData.name,
         from_email: formData.email,
-        phone: formData.phone,
-        company: formData.company,
+        phone_number: formData.phone,
+        company_name: formData.company,
         subject: formData.subject,
         message: formData.message,
-        to_name: 'Deep',
       };
 
       const result = await emailjs.send(
