@@ -17,7 +17,7 @@ const Contact = () => {
   
   useEffect(() => {
     // Initialize EmailJS with your public key
-    emailjs.init('jLn5LV6_Kd-7XoLr_');
+    emailjs.init('service_dcs524g');
   }, []);
 
   const [formData, setFormData] = useState({
