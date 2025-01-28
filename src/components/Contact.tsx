@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { X } from "lucide-react";
+import emailjs from '@emailjs/browser';
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -11,6 +13,8 @@ const Contact = () => {
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
+  const { toast } = useToast();
+  
   const [formData, setFormData] = useState({
     name: "",
     phone: "+91",
@@ -35,36 +39,51 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3000/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      // Replace these with your actual EmailJS service details
+      const result = await emailjs.send(
+        'YOUR_SERVICE_ID', // Create this in EmailJS dashboard
+        'YOUR_TEMPLATE_ID', // Create this in EmailJS dashboard
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Your Name', // Replace with your name
         },
-        body: JSON.stringify(formData),
-      });
+        'YOUR_PUBLIC_KEY' // Get this from EmailJS dashboard
+      );
 
-      if (!response.ok) {
-        throw new Error("Failed to send message");
+      if (result.status === 200) {
+        setNotification({
+          type: "success",
+          message: "Message sent! We'll get back to you as soon as possible.",
+        });
+        toast({
+          title: "Success",
+          description: "Your message has been sent successfully!",
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          phone: "+91",
+          email: "",
+          company: "",
+          subject: "",
+          message: "",
+        });
       }
-
-      setNotification({
-        type: "success",
-        message: "Message sent! We'll get back to you as soon as possible.",
-      });
-
-      // Reset form
-      setFormData({
-        name: "",
-        phone: "+91",
-        email: "",
-        company: "",
-        subject: "",
-        message: "",
-      });
     } catch (error) {
       setNotification({
         type: "error",
         message: "Failed to send message. Please try again later.",
+      });
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
       });
     } finally {
       setIsLoading(false);
