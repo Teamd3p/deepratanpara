@@ -16,8 +16,7 @@ const Contact = () => {
   const { toast } = useToast();
   
   useEffect(() => {
-    // Initialize EmailJS with your public key
-    emailjs.init('uRre9hqR56qq3VWUr');
+    emailjs.init("uRre9hqR56qq3VWUr");
   }, []);
 
   const [formData, setFormData] = useState({
