@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,6 +15,11 @@ const Contact = () => {
   }>({ type: null, message: "" });
   const { toast } = useToast();
   
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init('jLn5LV6_Kd-7XoLr_');
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "+91",
@@ -39,19 +44,20 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: 'Deep',
+      };
+
       const result = await emailjs.send(
         'service_8gzv2wp',
         'template_4k8p87n',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          company: formData.company,
-          subject: formData.subject,
-          message: formData.message,
-          to_name: 'Deep', 
-        },
-        'jLn5LV6_Kd-7XoLr_'
+        templateParams
       );
 
       if (result.status === 200) {
