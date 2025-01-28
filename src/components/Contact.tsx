@@ -39,10 +39,9 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      // Replace these with your actual EmailJS service details
       const result = await emailjs.send(
-        'YOUR_SERVICE_ID', // Create this in EmailJS dashboard
-        'YOUR_TEMPLATE_ID', // Create this in EmailJS dashboard
+        'service_8gzv2wp',
+        'template_4k8p87n',
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -50,9 +49,9 @@ const Contact = () => {
           company: formData.company,
           subject: formData.subject,
           message: formData.message,
-          to_name: 'Your Name', // Replace with your name
+          to_name: 'Deep', 
         },
-        'YOUR_PUBLIC_KEY' // Get this from EmailJS dashboard
+        'jLn5LV6_Kd-7XoLr_'
       );
 
       if (result.status === 200) {
@@ -76,6 +75,7 @@ const Contact = () => {
         });
       }
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setNotification({
         type: "error",
         message: "Failed to send message. Please try again later.",
