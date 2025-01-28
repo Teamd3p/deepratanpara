@@ -55,7 +55,7 @@ const Contact = () => {
 
       const result = await emailjs.send(
         'service_d4i0r2u',
-        '__ejs-test-mail-service__',
+        'template_vi5s5jh',
         templateParams
       );
 
