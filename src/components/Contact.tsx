@@ -55,9 +55,10 @@ const Contact = () => {
       };
 
       const result = await emailjs.send(
-        'service_8gzv2wp',
-        'template_4k8p87n',
+        'service_d4i0r2u',
+        '__ejs-test-mail-service__',
         templateParams
+        'uRre9hqR56qq3VWUr'
       );
 
       if (result.status === 200) {
