@@ -78,7 +78,7 @@ const Navbar = () => {
               onClick={() => scrollToSection('contact')}
               className="bg-primary hover:bg-primary/90 transition-colors duration-300"
             >
-              Contact Us
+              Contact Me
             </Button>
           </div>
         </div>
