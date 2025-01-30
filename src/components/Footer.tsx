@@ -37,16 +37,16 @@ const Footer = () => {
             >
               <Github className="h-6 w-6" />
             </a>
-            <a
-              href="#"
-              target="_blank"
+            <a 
+              href="https://www.linkedin.com/in/deep-ratanpara-a87810269/" 
+              target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-primary transition-colors duration-300"
+              className="text-gray-700 hover:text-primary transition-colors duration-300"
             >
-              <Twitter className="h-6 w-6" />
+              <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/cityboy__d3p?utm_source=qr&igsh=dDU1cGJ0MjU2MzJo"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-primary transition-colors duration-300"
