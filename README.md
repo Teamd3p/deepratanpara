@@ -1,8 +1,8 @@
-# Welcome to your Lovable project
+# Welcome to your project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/ece066d1-7391-4676-a466-496e57f35260
+**URL**: https://deepratanpara.vercel.app/
 
 ## How can I edit this code?
 
@@ -10,9 +10,9 @@ There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ece066d1-7391-4676-a466-496e57f35260) and start prompting.
+Simply visit the [Portfolio](https://deepratanpara.vercel.app/) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+
 
 **Use your preferred IDE**
 
