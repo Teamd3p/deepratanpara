@@ -1,43 +1,25 @@
-const SkillItem = ({ title, level }: { title: string; level: string }) => (
-  <div className="mb-8">
-    <h3 className="text-xl font-medium mb-2 text-primary">{title}</h3>
-    <p className="text-gray-400">{level}</p>
-    <div className="mt-2 h-[1px] bg-primary/20"></div>
-  </div>
-);
+import { skills } from "@/data/profile";
+import SectionTitle from "./SectionTitle";
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-background text-white relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-light mb-4 text-primary">Skills</h2>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-4xl font-bold mb-12 text-primary">Languages</h2>
-              <div>
-                <SkillItem title="Python" level="Experienced" />
-                <SkillItem title="C/C#" level="Experienced" />
-                <SkillItem title="PostgreSQL" level="Intermediate" />
-                <SkillItem title="Java | SpringBoot" level="Basic" />
-              </div>
+    <section id="skills" className="py-14 md:py-16 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4">
+        <SectionTitle eyebrow="What I work with" title="Skills" />
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-8">
+          {skills.map((s) => (
+            <div key={s.group}>
+              <h3 className="text-lg font-semibold text-primary mb-3 pb-2 border-b border-primary/20">{s.group}</h3>
+              <ul className="space-y-1.5">
+                {s.items.map((item) => (
+                  <li key={item} className="text-gray-700 text-[15px]">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-          
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-4xl font-bold mb-12 text-primary">Tools & Technologies</h2>
-              <div>
-                <SkillItem title="Kali Linux and its tools" level="Experienced" />
-                <SkillItem title="OWAP Zap" level="Experienced" />
-                <SkillItem title="Burp Suite" level="Experienced" />
-                <SkillItem title="WireShark" level="Basic" />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

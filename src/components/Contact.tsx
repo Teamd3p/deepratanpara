@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { X } from "lucide-react";
+import { X, Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { profile } from "@/data/profile";
+import SectionTitle from "./SectionTitle";
 import emailjs from '@emailjs/browser';
 import { useToast } from "@/hooks/use-toast";
 
@@ -95,25 +97,58 @@ const Contact = () => {
     }
   };
 
+  const info = [
+    { icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
+    { icon: Phone, label: "Phone", value: profile.phone, href: `tel:${profile.phoneHref}` },
+    { icon: Linkedin, label: "LinkedIn", value: "deep-ratanpara", href: profile.linkedin },
+    { icon: Github, label: "GitHub", value: "Teamd3p", href: profile.github },
+    { icon: MapPin, label: "Location", value: profile.location },
+  ];
+
   return (
-    <section id="contact" className="py-20 bg-gray-50 scroll-mt-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl text-center mb-4">Let's Connect</h2>
-        <p className="text-center text-gray-600 mb-12">
-          Get in touch with your customers to provide them with better service.
-          You can modify the form fields to gather more precise information.
-        </p>
-        <div className="max-w-xl mx-auto">
+    <section id="contact" className="py-14 md:py-16 bg-gray-50">
+      <div className="max-w-5xl mx-auto px-4">
+        <SectionTitle eyebrow="Open to backend roles & collaborations" title="Let's Connect" />
+        <div className="grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-8">
+          <div className="space-y-3">
+            <p className="text-gray-600 mb-4">
+              Hiring for a backend role, or have an idea you want to build? Drop a message and I'll reply within a day or two.
+            </p>
+            {info.map(({ icon: Icon, label, value, href }) => {
+              const body = (
+                <>
+                  <span className="h-10 w-10 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                    <Icon className="h-[18px] w-[18px]" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-xs text-gray-400">{label}</span>
+                    <span className="block text-gray-800 truncate">{value}</span>
+                  </span>
+                </>
+              );
+              return href ? (
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-3 bg-white rounded-lg border hover:border-primary/50 transition-colors"
+                >
+                  {body}
+                </a>
+              ) : (
+                <div key={label} className="flex items-center gap-3 p-3 bg-white rounded-lg border">
+                  {body}
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="bg-white rounded-xl border p-5 md:p-6">
           {notification.type && (
-            <Alert
-              className={`mb-6 ${
-                notification.type === "success" ? "bg-green-50" : "bg-red-50"
-              }`}
-            >
+            <Alert className={`mb-4 ${notification.type === "success" ? "bg-green-50" : "bg-red-50"}`}>
               <AlertTitle className="flex justify-between items-center">
-                <span>
-                  {notification.type === "success" ? "Success" : "Error"}
-                </span>
+                <span>{notification.type === "success" ? "Success" : "Error"}</span>
                 <Button
                   variant="ghost"
                   size="sm"
@@ -126,8 +161,8 @@ const Contact = () => {
               <AlertDescription>{notification.message}</AlertDescription>
             </Alert>
           )}
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
+          <form onSubmit={handleSubmit} className="space-y-3">
+            <div className="grid sm:grid-cols-2 gap-3">
               <Input
                 name="name"
                 value={formData.name}
@@ -135,8 +170,6 @@ const Contact = () => {
                 placeholder="Your Name *"
                 required
               />
-            </div>
-            <div>
               <Input
                 name="phone"
                 type="tel"
@@ -145,7 +178,7 @@ const Contact = () => {
                 placeholder="Phone Number"
               />
             </div>
-            <div>
+            <div className="grid sm:grid-cols-2 gap-3">
               <Input
                 name="email"
                 type="email"
@@ -154,8 +187,6 @@ const Contact = () => {
                 placeholder="Your Email *"
                 required
               />
-            </div>
-            <div>
               <Input
                 name="company"
                 value={formData.company}
@@ -177,9 +208,9 @@ const Contact = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Your Question *"
+                placeholder="Your Message *"
                 required
-                className="min-h-[100px]"
+                className="min-h-[150px] md:min-h-[190px]"
               />
             </div>
             <Button
@@ -187,9 +218,10 @@ const Contact = () => {
               className="w-full bg-primary hover:bg-primary/90"
               disabled={isLoading}
             >
-              {isLoading ? "Sending..." : "Submit"}
+              {isLoading ? "Sending..." : "Send Message"}
             </Button>
           </form>
+          </div>
         </div>
       </div>
     </section>

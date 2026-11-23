@@ -6,7 +6,6 @@ import Work from "@/components/Work";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import LearningAndAchievement from "@/components/LearningAndAchievement";
-import SocialLinks from "@/components/SocialLinks";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -42,7 +41,6 @@ const Index = () => {
       <Skills />
       <Projects />
       <LearningAndAchievement />
-      <SocialLinks />
       <Contact />
       <Footer />
     </div>
