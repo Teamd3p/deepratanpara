@@ -5,7 +5,7 @@ export const profile = {
   firstName: "Deep",
   role: "Backend Engineer",
   tagline: "I build reliable backend systems with Java, Spring Boot & SQL",
-  location: "Rajkot, Gujarat, India",
+  location: "Bangalore, Karnataka, India",
   email: "ratanparadeep3108@gmail.com",
   phone: "+91 98700 12628",
   phoneHref: "+919870012628",
@@ -14,7 +14,7 @@ export const profile = {
   instagram: "https://www.instagram.com/cityboy__d3p?utm_source=qr&igsh=dDU1cGJ0MjU2MzJo",
   resume: "/lovable-uploads/Deep_Resume.pdf",
   // Swap this file to change the profile photo.
-  photo: "/lovable-uploads/8b4afc54-d6f9-419a-835d-282b4f1fd79d.png",
+  photo: "/images/profile.jpg",
   heroImage: "/lovable-uploads/9eecee0c-ca57-43da-b041-7d12a7763ce2.png",
 };
 

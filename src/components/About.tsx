@@ -8,7 +8,7 @@ const About = () => {
         <div className="grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-center gap-10">
           <div className="relative w-56 md:w-72 aspect-square mx-auto">
             <div className="absolute -inset-2 rounded-full border border-primary/30" />
-            <img src={profile.photo} alt={profile.name} className="w-full h-full rounded-full object-cover grayscale shadow-lg" />
+            <img src={profile.photo} alt={profile.name} className="w-full h-full rounded-full object-cover shadow-lg" />
           </div>
 
           <div>
