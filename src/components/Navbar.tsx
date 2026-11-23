@@ -1,87 +1,59 @@
-import { Github, Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { Github, Linkedin, Menu, X } from "lucide-react";
+import { profile } from "@/data/profile";
+
+const links = [
+  { href: "#about", label: "About" },
+  { href: "#work", label: "Work" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#achievements", label: "Patents" },
+];
 
 const Navbar = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
+  const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 border-b">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/Deep-5.svg" 
-              alt="Deep Logo" 
-              className="h-12 w-auto mix-blend-multiply"
-            />
-          </div>
-          
-          <div className="hidden md:flex items-center space-x-8">
-            <a 
-              href="#" 
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
-            >
-              Home
-            </a>
-            <a 
-              href="#work" 
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
-            >
-              Work
-            </a>
-            <a 
-              href="#skills" 
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
-            >
-              Skills
-            </a>
-            <a 
-              href="#projects" 
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
-            >
-              Projects
-            </a>
-            <button
-              onClick={() => scrollToSection('achievements')}
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
-            >
-              Achievements
-            </button>
+    <nav className="fixed top-0 left-0 right-0 bg-white/85 backdrop-blur-sm z-50 border-b">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex items-center justify-between h-14">
+          <a href="#top" aria-label="Home">
+            <img src="/lovable-uploads/Deep-5.svg" alt="Deep" className="h-10 w-auto mix-blend-multiply" />
+          </a>
+
+          <div className="hidden md:flex items-center gap-7 text-sm">
+            {links.map((l) => (
+              <a key={l.href} href={l.href} className="text-gray-700 hover:text-primary transition-colors">
+                {l.label}
+              </a>
+            ))}
           </div>
 
-          <div className="flex items-center space-x-4">
-            <a 
-              href="https://github.com/Teamd3p" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
-            >
-              <Github className="h-5 w-5" />
+          <div className="flex items-center gap-3">
+            <a href={profile.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hidden sm:block text-gray-700 hover:text-primary transition-colors">
+              <Github className="h-[18px] w-[18px]" />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/deep-ratanpara-a87810269/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
-            >
-              <Linkedin className="h-5 w-5" />
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hidden sm:block text-gray-700 hover:text-primary transition-colors">
+              <Linkedin className="h-[18px] w-[18px]" />
             </a>
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-primary hover:bg-primary/90 transition-colors duration-300"
-            >
+            <a href="#contact" className="bg-primary text-white text-sm px-4 py-2 rounded-md hover:bg-primary/90 transition-colors">
               Contact Me
-            </Button>
+            </a>
+            <button className="md:hidden text-gray-700" onClick={() => setOpen(!open)} aria-label="Menu">
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
           </div>
         </div>
+
+        {open && (
+          <div className="md:hidden flex flex-col pb-3 text-sm">
+            {links.map((l) => (
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-2 text-gray-700 hover:text-primary">
+                {l.label}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </nav>
   );
