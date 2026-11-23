@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f2333"/><stop offset="1" stop-color="#3a2236"/></linearGradient></defs>
-  <rect width="600" height="340" fill="url(#g)"/>
-  <g stroke="#ffffff" stroke-opacity=".08">
-    <path d="M0 85H600M0 170H600M0 255H600M150 0V340M300 0V340M450 0V340"/>
-  </g>
-  <polyline fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="3" points="30,250 90,220 140,235 190,180 240,200 290,150 340,170 390,95 440,140 490,120 570,135"/>
-  <circle cx="390" cy="95" r="16" fill="#FF4D93" fill-opacity=".25"/>
-  <circle cx="390" cy="95" r="7" fill="#FF4D93"/>
-  <g fill="#ffffff" fill-opacity=".9" font-family="Poppins,Arial,sans-serif">
-    <rect x="410" y="40" width="150" height="38" rx="6" fill="#FF4D93"/>
-    <text x="425" y="65" font-size="15" fill="#fff">ALERT · Rule #12</text>
-  </g>
-  <g fill="#ffffff" fill-opacity=".15">
-    <rect x="30" y="280" width="120" height="10" rx="5"/><rect x="170" y="280" width="80" height="10" rx="5"/><rect x="270" y="280" width="150" height="10" rx="5"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 338"><rect width="600" height="338" fill="#1f2333"/><text x="36" y="58" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="18" letter-spacing="4" fill="#ffffff" fill-opacity=".55">PROJECT 01</text><text x="566" y="318" text-anchor="end" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="120" font-weight="200" fill="#ffffff" fill-opacity=".07">01</text><text y="150" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="54" font-weight="300" fill="#ffffff"><tspan x="36" dy="0">AML System</tspan></text><rect x="36" y="180" width="40" height="3" fill="#FF4D93"/><text x="36" y="222" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="21" fill="#ffffff" fill-opacity=".75">Spring Boot · PostgreSQL · Rule Engine</text></svg>
