@@ -27,7 +27,7 @@ export const about = [
 export const stats = [
   { value: "~2 yrs", label: "Industry experience" },
   { value: "2", label: "Patents filed" },
-  { value: "8.0", label: "B.Sc. CS CGPA" },
+  { value: "8.0", label: "B.Tech CS CGPA" },
 ];
 
 export type Job = {
@@ -143,7 +143,7 @@ export const patents = [
 ];
 
 export const education = [
-  { title: "B.Sc. Computer Science", place: "Marwadi University (NAAC A+), Rajkot", score: "CGPA 8.0 / 10" },
+  { title: "B.Tech in Computer Science", place: "Marwadi University (NAAC A+), Rajkot", score: "CGPA 8.0 / 10" },
   { title: "Class XII", place: "Dholakiya School, Rajkot", score: "7.0" },
   { title: "Class X", place: "Dholakiya School, Rajkot", score: "8.0" },
 ];
