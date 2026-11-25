@@ -20,14 +20,14 @@ export const profile = {
 
 export const about = [
   "I'm Deep, a backend engineer who enjoys designing APIs, validation pipelines and data-heavy services that hold up in production.",
-  "At TSS Consultancy Services I owned the Data Validation feature of the CKYC platform end to end, from design to release, and made it run on both PostgreSQL and MySQL from one codebase. I'm now an Engineer at Tata Elxsi.",
+  "At TSS Consultancy Services I owned the Data Validation feature of the CKYC platform end to end, from design to release, and made it run on both PostgreSQL and MySQL from one codebase. I'm now a Software Engineer at Tata Elxsi.",
   "My background in security (two filed patents, VAPT, OWASP) shapes how I write backend code: validate early, log everything, trust nothing.",
 ];
 
 export const stats = [
   { value: "~2 yrs", label: "Industry experience" },
   { value: "2", label: "Patents filed" },
-  { value: "8.0", label: "B.Sc. CS CGPA" },
+  { value: "8.0", label: "B.Tech CS CGPA" },
 ];
 
 export type Job = {
@@ -42,7 +42,7 @@ export type Job = {
 export const work: Job[] = [
   {
     company: "Tata Elxsi",
-    role: "Engineer",
+    role: "Software Engineer",
     period: "Jun 2026 – Present",
     current: true,
     points: [
@@ -143,7 +143,7 @@ export const patents = [
 ];
 
 export const education = [
-  { title: "B.Sc. Computer Science", place: "Marwadi University (NAAC A+), Rajkot", score: "CGPA 8.0 / 10" },
+  { title: "B.Tech in Computer Science", place: "Marwadi University (NAAC A+), Rajkot", score: "CGPA 8.0 / 10" },
   { title: "Class XII", place: "Dholakiya School, Rajkot", score: "7.0" },
   { title: "Class X", place: "Dholakiya School, Rajkot", score: "8.0" },
 ];
